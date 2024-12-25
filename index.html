@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/3dd7837a7c.js" crossorigin="anonymous"></script>
+    <title>Prueba API Weather</title>
+</head>
+
+<body>
+    <div id = "cloud"><span class='shadow'></span></div>
+    <div class="titulo">
+        <h1>Prueba de API Weather</h1>
+        <form action="#" method="POST">
+            <div>
+                <div class="form-group">
+                    <div>
+                        <label for="pais">País:</label>
+                        <select name="pais" id="paises" required>
+                            <option value="">Seleccione un país</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="ciudad">Ciudad:</label>
+                        <input type="text" name="ciudad" id="ciudad" required>
+                    </div>
+                    <button type="submit" id="boton">Consultar</button> 
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="datos" id="datos-group"></div>
+    <script src="index.js"></script>
+</body>
+
+</html>
