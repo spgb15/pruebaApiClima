@@ -1,9 +1,11 @@
+import config from "./config.js";
+
 document.addEventListener('DOMContentLoaded', async () => {
     const dato = document.getElementById('ciudad');
     const boton = document.getElementById('boton');
     const pais = document.getElementById('paises');
     const datos = document.getElementById('datos-group');
-    const token_weather = 'a565f74d2826bfe709b61b8067e8133d';
+    
     
 
     const url = 'https://restcountries.com/v3.1/all';
@@ -24,7 +26,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             return;
         }
 
-        const urlWeather = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad},${paisSeleccionado}&appid=${token_weather}`;
+        const urlWeather = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad},${paisSeleccionado}&appid=${config.api_key_weather}`;
         const resultado = await obtenerDatos(urlWeather);
 
         if (resultado) {
